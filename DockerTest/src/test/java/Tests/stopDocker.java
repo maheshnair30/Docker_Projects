@@ -20,6 +20,7 @@ public class stopDocker {
 	//boolean flag=false;
 		Runtime runtime= Runtime.getRuntime();
 		runtime.exec("cmd /c start dockerDown.bat");
+		Thread.sleep(10000);
 		Runtime.getRuntime().exec("taskkill /f /im cmd.exe") ;
 		
 //	String f ="output.txt";
