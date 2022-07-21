@@ -17,11 +17,11 @@ public class chromeStandaloneTest {
 	@BeforeTest
 	public void startDockerScale() throws IOException, InterruptedException
 	{
-		File fi =new File("output.txt");
-		if(fi.delete())
-		{
-			System.out.println("file deleted successfully");
-		}
+//		File fi =new File("output.txt");
+//		if(fi.delete())
+//		{
+//			System.out.println("file deleted successfully");
+//		}
 		startDocker s=new startDocker();
 		s.startFile();
 	}

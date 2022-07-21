@@ -17,46 +17,47 @@ public class stopDocker {
 	public void stopFile() throws IOException, InterruptedException
 	{
 		
-	boolean flag=false;
+	//boolean flag=false;
 		Runtime runtime= Runtime.getRuntime();
 		runtime.exec("cmd /c start dockerDown.bat");
+		Runtime.getRuntime().exec("taskkill /f /im cmd.exe") ;
 		
-	String f ="output.txt";
+//	String f ="output.txt";
+//	
+//	Calendar cal=Calendar.getInstance();//2:44 15th second
+//	cal.add(Calendar.SECOND, 45);//2:44   45seconds
+//	long stopnow=cal.getTimeInMillis();
+//	Thread.sleep(3000);
+//	
+//	while(System.currentTimeMillis()<stopnow)
+//	{
+//		if(flag)
+//		{
+//			break;
+//		}
+//		
+//		BufferedReader reader=new BufferedReader(new FileReader(f));
+//		String currentLine=reader.readLine();
+//	while(currentLine!=null && !flag)
+//		
+//	{
+//		
+//		if(currentLine.contains("selenium-hub exited"))
+//		{
+//			System.out.println("found my text");
+//			flag=true;//14th seconds
+//			break;
+//		}
+//		
+//		 currentLine=reader.readLine();
+//	}
+//	reader.close();
 	
-	Calendar cal=Calendar.getInstance();//2:44 15th second
-	cal.add(Calendar.SECOND, 45);//2:44   45seconds
-	long stopnow=cal.getTimeInMillis();
-	Thread.sleep(3000);
-	
-	while(System.currentTimeMillis()<stopnow)
-	{
-		if(flag)
-		{
-			break;
-		}
-		
-		BufferedReader reader=new BufferedReader(new FileReader(f));
-		String currentLine=reader.readLine();
-	while(currentLine!=null && !flag)
-		
-	{
-		
-		if(currentLine.contains("selenium-hub exited"))
-		{
-			System.out.println("found my text");
-			flag=true;//14th seconds
-			break;
-		}
-		
-		 currentLine=reader.readLine();
 	}
-	reader.close();
 	
-	}
-	
-Assert.assertTrue(flag);
+//Assert.assertTrue(flag);
 
 }
 	
 	
-}
+

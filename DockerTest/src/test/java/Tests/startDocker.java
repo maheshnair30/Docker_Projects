@@ -50,11 +50,11 @@ public class startDocker {
 //	
 //	}
 //
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 //Assert.assertTrue(flag);
 		runtime.exec("cmd /c start scale.bat");
 
-		Thread.sleep(60000);
+		Thread.sleep(10000);
 
 	}
 
